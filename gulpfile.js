@@ -9,7 +9,16 @@ gulp.task('styles', () => {
 		.pipe(concat('style.css'))
 		.pipe(gulp.dest('./public/styles'))
 });
+gulp.task('scripts', () => {
+	return gulp.src('./dev/scripts/main.js')
+		.pipe(babel({
+			presents: ['es2015', 'es2016']
+		}))
+		.pipe(gulp.dest('./public/scripts'))
+});
+
 
 gulp.task('default', ['styles'], () => {
 	gulp.watch('./dev/styles/**/*.scss', ['styles']);
-})
+	gulp.watch('./dev/scripts/main.js');
+});
