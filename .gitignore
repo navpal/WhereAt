@@ -1,0 +1,4 @@
+node_modules
+.DS_Store
+public/styles/style.css
+public/scripts/main.js
