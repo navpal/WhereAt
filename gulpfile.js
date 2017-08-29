@@ -12,7 +12,7 @@ gulp.task('styles', () => {
 gulp.task('scripts', () => {
 	return gulp.src('./dev/scripts/main.js')
 		.pipe(babel({
-			presents: ['es2015', 'es2016']
+			presets: ['es2015', 'es2016']
 		}))
 		.pipe(gulp.dest('./public/scripts'))
 });
@@ -20,5 +20,5 @@ gulp.task('scripts', () => {
 
 gulp.task('default', ['styles'], () => {
 	gulp.watch('./dev/styles/**/*.scss', ['styles']);
-	gulp.watch('./dev/scripts/main.js');
+	gulp.watch('./dev/scripts/main.js'), ['scripts'];
 });
