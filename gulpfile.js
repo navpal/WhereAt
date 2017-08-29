@@ -9,6 +9,14 @@ gulp.task('styles', () => {
 		.pipe(concat('style.css'))
 		.pipe(gulp.dest('./public/styles'))
 });
+gulp.task('scripts', () => {
+	return gulp.src('./dev/scripts/main.js')
+		.pipe(babel({
+			presents: ['es2015', 'es2016']
+		}))
+		.pipe(gulp.dest('./public/scripts'))
+});
+
 
 gulp.task('browser-sync', () => {
 	browserSync.init({
@@ -18,6 +26,7 @@ gulp.task('browser-sync', () => {
 
 gulp.task('default', ['styles', 'browserSync'], () => {
 	gulp.watch('./dev/styles/**/*.scss', ['styles']);
-	gulp.watch('*.html', reload);
-
+	gulp.watch('./dev/scripts/main.js');
+  gulp.watch('*.html', reload);
 })
+
