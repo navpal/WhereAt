@@ -10,6 +10,14 @@ gulp.task('styles', () => {
 		.pipe(gulp.dest('./public/styles'))
 });
 
-gulp.task('default', ['styles'], () => {
+gulp.task('browser-sync', () => {
+	browserSync.init({
+		server: '.'
+	});
+});
+
+gulp.task('default', ['styles', 'browserSync'], () => {
 	gulp.watch('./dev/styles/**/*.scss', ['styles']);
+	gulp.watch('*.html', reload)
+
 })
