@@ -14,7 +14,7 @@ gulp.task('styles', () => {
 gulp.task('scripts', () => {
 	return gulp.src('./dev/scripts/main.js')
 		.pipe(babel({
-			presets: ['es2015', 'es2016']
+			presets: ['es2015']
 		}))
 		.pipe(gulp.dest('./public/scripts'));
 });
@@ -31,4 +31,3 @@ gulp.task('default', ['styles', 'browser-sync', 'scripts'], () => {
 	gulp.watch('./dev/scripts/main.js'), ['scripts'];
  	gulp.watch('*.html', reload);
 });
-
