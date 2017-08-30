@@ -7,14 +7,23 @@
 
 </head>
 <body>
-	<h1>This is our website title!</h1>
-
-	<form action="">
-		<input type="text" class="artist" value="flume">
-		<input type="submit">
-	</form>
-
-		<script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
-	  	<script src="./dev/scripts/main.js"></script>
+	<header>
+		<div class="wrapper">
+			<h1>This is our website title!</h1>
+			<form action="">
+				<input type="text" class="artist">
+				<input type="submit">
+			</form>
+		</div>
+	</header>
+	<section class="didYouMean">
+		<div class="wrapper">
+			<div class="artistCardContainer">
+				<!--DYNAMICALLY GENERATED CONTENT-->
+			</div>
+		</div>
+	</section>
+	<script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+	<script src="./dev/scripts/main.js"></script>
 </body>
 </html>
