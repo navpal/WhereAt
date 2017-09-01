@@ -3,27 +3,38 @@
 <head>
 	<meta charset="UTF-8">
 	<title>SetListFM</title>
-	<link rel="stylesheet" href="./dev/styles/style.scss">
-
+	<link rel="stylesheet" href="./public/styles/style.css">
+	<link href="//cdn.rawgit.com/noelboss/featherlight/1.7.8/release/featherlight.min.css" type="text/css" rel="stylesheet" />
 </head>
 <body>
 	<header>
 		<div class="wrapper">
 			<h1>This is our website title!</h1>
 			<form action="">
-				<input type="text" class="artist">
+				<input type="text" class="artist" value="taylor swift">
 				<input type="submit">
 			</form>
 		</div>
 	</header>
 	<section class="didYouMean">
 		<div class="wrapper">
-			<div class="artistCardContainer">
+			<div class="artistCardContainer clearfix">
 				<!--DYNAMICALLY GENERATED CONTENT-->
 			</div>
 		</div>
 	</section>
+	<section class="listOfShows">
+		<div class="wrapper">
+			<div class="showContainer clearfix">
+				<!-- DYNAMICALLY GENERATED CONTENT -->
+			</div>
+		</div>
+	</section>
+	<script
+	   src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCiY1H8I5iFGSoCG8uz6phMaM4SnQGd5XY">
+	</script>
 	<script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+	<script src="//cdn.rawgit.com/noelboss/featherlight/1.7.8/release/featherlight.min.js" type="text/javascript" charset="utf-8"></script>
 	<script src="./dev/scripts/main.js"></script>
 </body>
 </html>
