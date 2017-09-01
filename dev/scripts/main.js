@@ -171,11 +171,14 @@ setList.events = () => {
 			console.log(songArr, lat, long);
 
 		}
+		console.log('events');
 		setList.lightBox(songArr, function(){
 			setList.initMap(lat, long)
 		});
 	});
 }
+
+
 
 setList.initMap = (lat, long) => {
     let venue = {lat: lat, lng: long};
@@ -191,7 +194,7 @@ setList.initMap = (lat, long) => {
 
 setList.lightBox = (songArr, callback) => {
 	console.log(songArr);
-	let lightBox = $('<div>').addClass('lightbox').attr('data-featherlight', '#mylightbox' );
+	let lightBox = $('<div>').addClass('lightbox');
 	let setSongs = $('<ul>').addClass('setSongs');
 	//make container for map
 	let mapContainer = $('<div>').attr('id', 'mapContainer');
