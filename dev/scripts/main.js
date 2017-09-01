@@ -81,6 +81,7 @@ setList.displayCards = (name, desc, mbid) => {
 	let bandCard = artistCard.append(artistCardName, artistCardDesc);
 	$('.artistCardContainer').append(bandCard);
 }
+
 setList.getVenueInfo = (artistId) => {
 	$.ajax({
 		url: 'http://proxy.hackeryou.com',
@@ -100,13 +101,24 @@ setList.getVenueInfo = (artistId) => {
 	}).then(function(res){
 		// console.log(res);
 		$('.showContainer').empty();
-		let setlists = res.setlist;
-		setList.recentShows(setlists);
+			let setlists = res.setlist;
+		if(setlists.length > 1){
+			setList.recentShows(setlists);
+
+		}
+		else if(setlists.length == 1){
+			setList.failMsg();
+		}
+
 	}, function(failure){
-		// console.log('failure');
-		let failureMsg = $('<h2>').addClass('failureMsg').text('Sorry no shows');
-		$('.showContainer').append(failureMsg);
+		setList.failMsg();
 	});
+}
+
+setList.failMsg = () => {
+	let failureMsg = $('<h2>').addClass('failureMsg').text('Sorry no shows');
+	$('.showContainer').empty();
+	$('.showContainer').append(failureMsg);
 }
 
 setList.recentShows = (arr) => {
@@ -123,15 +135,15 @@ setList.recentShows = (arr) => {
 
 		if (arr[i].sets.set.length > 0) {
 			let eventSet = arr[i].sets.set[0].song;
-			setList.displayShows(eventDate, eventVenue, eventCity, eventSet);
-			setList.lightBox(eventSet, eventLat, eventLong);
+			setList.displayShows(eventDate, eventVenue, eventCity, eventSet, eventLat, eventLong);
+
 		}
 
 
 	}
 }
 
-setList.displayShows = (date, venue, city, set) => {
+setList.displayShows = (date, venue, city, set, lat, long) => {
 	// console.log(date, venue, city)
 	let dateCont= $('<div>').addClass('dateContainer');
 	let showDate = $('<p>').addClass('date').text(date);
@@ -140,31 +152,69 @@ setList.displayShows = (date, venue, city, set) => {
 	let venueName = $('<h4>').addClass('venueName').text(venue);
 	let cityName = $('<h5>').addClass('cityName').text(city);
     console.log(set[0])
-	let showCard = $('<div>').addClass('showCard').attr('data-featherlight', '#lightbox').attr('data-set', JSON.stringify(set)).append(dateContainer, venueName, cityName);
+	let showCard = $('<div>').addClass('showCard').attr('data-set', JSON.stringify(set)).attr('data-lat', lat).attr('data-long', long).append(dateContainer, venueName, cityName);
 	$('.showContainer').append(showCard);
 
 }
 
 
-setList.lightBox = (eventSet, eventLat, eventLong) => {
-	$('.showCard').on('click', function() {
-		let lightBox = $('<div>').attr('id', 'lightbox');
-		let setSongs = $('<ul>').addClass('setSongs');
+setList.events = () => {
+	$('.showContainer').on('click', '.showCard', function() {
 		var sets = $(this).data('set');
-			// JSON.parse(sets);
-			console.log(sets)
-		for (let i = 0; i < eventSet.length; i++) {
-			let songName = eventSet[i].name;
-		}
+		var lat = $(this).data('lat');
+		var long = $(this).data('long')
+		let songArr = [];
 
+		for (let i = 0; i < sets.length; i++) {
+			let songName = sets[i].name;
+			songArr.push(songName);
+			console.log(songArr, lat, long);
+
+		}
+		setList.lightBox(songArr, function(){
+			setList.initMap(lat, long)
+		});
 	});
 }
+
+setList.initMap = (lat, long) => {
+    let venue = {lat: lat, lng: long};
+    let map = new google.maps.Map(document.getElementById('mapContainer'), {
+      zoom: 10,
+      center: venue
+    });
+    let marker = new google.maps.Marker({
+      position: venue,
+      map: map
+    });
+}
+
+setList.lightBox = (songArr, callback) => {
+	console.log(songArr);
+	let lightBox = $('<div>').addClass('lightbox').attr('data-featherlight', '#mylightbox' );
+	let setSongs = $('<ul>').addClass('setSongs');
+	//make container for map
+	let mapContainer = $('<div>').attr('id', 'mapContainer');
+	//append to lightbox
+
+	for (let i = 0; i < songArr.length; i++ ) {
+		let songItem = $('<li>').addClass('songItem').text(songArr[i]);
+		setSongs.append(songItem);
+		// $('#lightbox').append(setSongs);
+	}
+	$(lightBox).append(setSongs, mapContainer);
+	$.featherlight(lightBox, {
+		afterOpen: callback
+	});
+	// callback();
+	// setList.initMap(lat, long);
+}
+
 
 setList.init = () => {
 	setList.getUserInput();
 	setList.selectCard();
-	setList.lightBox();
-
+	setList.events();
 }
 
 $(function(){
