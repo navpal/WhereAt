@@ -1,6 +1,8 @@
 
 // Background Photo by Jesse Darland on Unsplash
 
+// Logo by Parker Foote on The Noun Project
+
 @import 'partials/_setup.scss';
 @import 'partials/_variables.scss';
 @import 'partials/_typography.scss';
@@ -53,6 +55,12 @@ header {
 
 }
 
+.musicIcon svg {
+	width: 150px;
+	fill: $baseGrey;
+}
+
+
 div.arrowContainer {
 	background: $baseGreen;
 	display: inline-block;
@@ -60,7 +68,7 @@ div.arrowContainer {
 	width: 70px;
 	border-radius: 50%;
 	text-align: center;
-	margin-top: 75px;
+	margin-top: 50px;
 	box-shadow: $baseShadow;
 
 }
@@ -136,7 +144,7 @@ input[type=text]:focus {
 }
 
 .artistCardContainer {
-	text-align: center;
+	text-align: justify;
 }
 
 .showCard,
@@ -147,10 +155,15 @@ input[type=text]:focus {
 	border: 1px solid #fff;
 	float: left;
 	margin-right: 10px;
+	margin-bottom: 50px;
 	border: 3px solid #fff;
 	box-shadow: $baseShadow;
 	text-align: center;
 	margin: 0 auto;
+}
+
+.dateContainer {
+	background: $baseGreen;
 }
 
 section {
