@@ -5,17 +5,39 @@
 	<title>SetListFM</title>
 	<link rel="stylesheet" href="./public/styles/style.css">
 	<link href="//cdn.rawgit.com/noelboss/featherlight/1.7.8/release/featherlight.min.css" type="text/css" rel="stylesheet" />
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans|Roboto+Condensed:400,700" rel="stylesheet">
+	<script src="https://use.fontawesome.com/f5b3918af3.js"></script>
 </head>
 <body>
 	<header>
 		<div class="wrapper">
-			<h1>This is our website title!</h1>
-			<form action="">
-				<input type="text" class="artist" value="taylor swift">
-				<input type="submit">
-			</form>
+			<div class="topBar">
+				<div class="topBarRight">
+					<img src="assets/HalcyonGroup-textLogo1.png" alt="Website By Halcyon Group">
+				</div>
+				<div class="topBarLeft">
+					<i class="fa fa-twitter fa-2x" aria-hidden="true"></i>
+				</div>
+			</div>
+			<div class="headerContainer">
+				<h1>Where<span>at?</span></h1>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda expedita possimus asperiores voluptate molestias odio laudantium. Explicabo commodi, harum cumque.</p>
+				<div class="arrowContainer">
+					<i class="fa fa-angle-down fa-4x" aria-hidden="true"></i>
+				</div>
+			</div>
+			
 		</div>
 	</header>
+	<section class="searchBar">
+		<div class="wrapper">
+			<form action="">
+				<h2>Who Are You Going To See?</h2>
+				<input type="text" class="artist" placeholder="eg. 'The Beatles'">
+				<!-- <input type="submit"> -->
+			</form>
+		</div>
+	</section>
 	<section class="didYouMean">
 		<div class="wrapper">
 			<div class="artistCardContainer clearfix">
