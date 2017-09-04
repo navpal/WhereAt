@@ -91,7 +91,11 @@ div.arrowContainer {
 }
 
 form {
+<<<<<<< HEAD
 	max-width: 800px;
+=======
+	width: 800px;
+>>>>>>> bf54435be6e8606dea34d6070676078a757543b7
 	height: 250px;
 	background: $baseDarkGrey;
 	margin: 0 auto;
@@ -139,6 +143,7 @@ input[type=text]:focus {
   font-family: $robotoCondensed;
 }
 
+<<<<<<< HEAD
 .arrowContainer {
 	transition: all 0.3s;
 }
@@ -147,6 +152,8 @@ input[type=text]:focus {
 	transform: scale(1.5);
 }
 
+=======
+>>>>>>> bf54435be6e8606dea34d6070676078a757543b7
 .didYouMean {
 	background: $baseDarkGrey;
 }
@@ -160,12 +167,17 @@ input[type=text]:focus {
 	width: calc((100% / 3) - 10px);
 	display: inline-block;
 	min-height: 150px;
+<<<<<<< HEAD
+=======
+	border: 1px solid #fff;
+>>>>>>> bf54435be6e8606dea34d6070676078a757543b7
 	float: left;
 	margin-right: 10px;
 	margin-bottom: 50px;
 	border: 3px solid #fff;
 	box-shadow: $baseShadow;
 	text-align: center;
+<<<<<<< HEAD
 	// margin: 0 auto;
 	position: relative;
 	background: $baseDarkGrey;
@@ -197,6 +209,9 @@ h5 {
 	bottom: 0%;
 	left: 50%;
 	transform: translate(-50%, -50%);
+=======
+	margin: 0 auto;
+>>>>>>> bf54435be6e8606dea34d6070676078a757543b7
 }
 
 .dateContainer {
