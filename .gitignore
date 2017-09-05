@@ -1,4 +1,7 @@
 node_modules
 .DS_Store
-public/styles/style.css
-public/scripts/main.js
+dev/scripts/main.js
+dev/styles/style.scss
+dev/partials/_setup.scss
+dev/partials/_typography.scss
+dev/partials/_variables.scss
