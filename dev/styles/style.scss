@@ -91,11 +91,7 @@ div.arrowContainer {
 }
 
 form {
-<<<<<<< HEAD
-	max-width: 800px;
-=======
-	width: 800px;
->>>>>>> bf54435be6e8606dea34d6070676078a757543b7
+	width: 80%;
 	height: 250px;
 	background: $baseDarkGrey;
 	margin: 0 auto;
@@ -113,7 +109,7 @@ input[type=text] {
 	left: 50%;
 	transform: translateY(-50%, -50%);
 	-webkit-transform:translate(-50%, -50%);
-	width: 400px;
+	width: 80%;
 	height: 75px;
 	margin-top: 25px;
 	background: $baseGrey;
@@ -143,7 +139,7 @@ input[type=text]:focus {
   font-family: $robotoCondensed;
 }
 
-<<<<<<< HEAD
+
 .arrowContainer {
 	transition: all 0.3s;
 }
@@ -152,8 +148,6 @@ input[type=text]:focus {
 	transform: scale(1.5);
 }
 
-=======
->>>>>>> bf54435be6e8606dea34d6070676078a757543b7
 .didYouMean {
 	background: $baseDarkGrey;
 }
@@ -167,27 +161,29 @@ input[type=text]:focus {
 	width: calc((100% / 3) - 10px);
 	display: inline-block;
 	min-height: 150px;
-<<<<<<< HEAD
-=======
-	border: 1px solid #fff;
->>>>>>> bf54435be6e8606dea34d6070676078a757543b7
 	float: left;
 	margin-right: 10px;
 	margin-bottom: 50px;
 	border: 3px solid #fff;
-	box-shadow: $baseShadow;
+	box-shadow: $pShadow;
 	text-align: center;
-<<<<<<< HEAD
 	// margin: 0 auto;
 	position: relative;
 	background: $baseDarkGrey;
 	transition: all 0.3s;
 }
 
-.artistCard:hover,
-.showCard:hover {
-	transform: scale(1.05);
+.showCard {
+	border: 3px solid $baseGreen;
 }
+
+.artistCard:hover,
+.showCard:hover,
+li:hover {
+	transform: scale(1.05);
+	box-shadow: $baseShadow;
+}
+
 
 .artistCard p {
 	position: absolute;
@@ -197,25 +193,14 @@ input[type=text]:focus {
 	font-size: 10px;
 }
 
-h3, h4 {
-		position: absolute;
-		top: 50%;
-		left: 50%;
-		transform: translate(-50%, -50%);
-}
 
-h5 {
-	position: absolute;
-	bottom: 0%;
-	left: 50%;
-	transform: translate(-50%, -50%);
-=======
-	margin: 0 auto;
->>>>>>> bf54435be6e8606dea34d6070676078a757543b7
-}
 
 .dateContainer {
 	background: $baseGreen;
+	width: 100px;
+	margin: 0 auto;
+	box-shadow: $baseShadow;
+	margin-top: 5px;
 }
 
 section {
@@ -232,26 +217,45 @@ section {
 div#mapContainer {
 	width: 100%;
 	height: 300px;
+	box-shadow: $baseShadow;
+	// margin-top: 20%;
 }
 
-/* Portrait tablet and small desktops */
+ul {
+	list-style: none;
+	text-align: center;
+}
+
+li {
+	font-family: $openSans;
+	color: $baseDarkGrey;
+	font-size: 1.5rem;
+	margin-bottom: 15px;
+	transition: all 0.3s;
+}
+
+footer {
+	background: $baseGreen;
+}
+
+// /* Portrait tablet and small desktops */
 @media (max-width: 940px) {
 	h1 {
 		font-size: 10rem;
 	}
+
 }
 
-/* Landscape phone to portrait tablet */
+// /* Landscape phone to portrait tablet */
 @media (max-width: 768px) {
 	h1 {
 		font-size: 6rem;
 	}
-	.searchBar {
-		// max-width: 480px;
+
+	.musicIcon svg {
+		width: 100px;
 	}
-	form {
-		// max-width: 480px
-	}
+
 	form h2 {
 		font-size: 2rem;
 	}
@@ -273,7 +277,7 @@ div#mapContainer {
 	}
 }
 
-/* Landscape phones and down */
+// /* Landscape phones and down */
 @media (max-width: 480px) {
 	h1 {
 		font-size: 5rem;
@@ -281,11 +285,15 @@ div#mapContainer {
 	.headerContainer p {
 	    max-width: 450px;
 	}
+
+	.musicIcon svg {
+		width: 80px;
+	}
 	.searchBar {
 		max-width: 480px;
 	}
 	form {
-		max-width: 480px;
+		width: 90%;
 	}
 	form h2 {
 		font-size: 2rem;
