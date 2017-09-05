@@ -3,16 +3,23 @@ setList.apiKey = 'adfa5e7c-adba-4668-a148-a7e3818447ce';
 // app.ArtistBaseUrl = 'https://api.setlist.fm/rest/1.0/search/artistsName?p=1&sort=sortName';
 // setList.venueBaseUrl = 'https://api.setlist.fm/rest/1.0/artist/c649f061-c881-4cdb-9812-736b4f04b4b8/setlists?p=1';
 
-// function getFirstElement(arr) {
+// function getFirstElement(arr) { 
 // 	return arr[0];
 // }
-
+$('.arrowContainer').click(function(e){
+	$('html, body').animate({
+		scrollTop: $('#searchBar').offset().top
+	}, 1500);
+})
 String.prototype.capitalize = function() {
    return this.replace(/(?:^|\s)\S/g, function(a) { return a.toUpperCase(); });
 };
 
 setList.getUserInput = () => {
 	$('form').on('submit', function(e){
+		$('html, body').animate({
+		         scrollTop: $("#listOfShows").offset().top
+		    }, 1500);
 		e.preventDefault();
 		$('.artistCardContainer').empty();
 		$('.showContainer').empty();
@@ -26,6 +33,9 @@ setList.getUserInput = () => {
 setList.selectCard = () => {
 
 	$('.artistCardContainer').on('click', '.artistCard', function(){
+		$('html, body').animate({
+		         scrollTop: $("#listOfShows").offset().top
+		    }, 1500);
 			let mbid = this.getAttribute('data-type');
 			setList.getVenueInfo(mbid);
 

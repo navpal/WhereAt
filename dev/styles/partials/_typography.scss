@@ -15,7 +15,11 @@ p {
 	font-family: $openSans;
 	color: #fff;
 	text-shadow: $pShadow;
+<<<<<<< HEAD
+	// font-size: 1.1rem;
+=======
 	font-size: 1.1rem;
+>>>>>>> bf54435be6e8606dea34d6070676078a757543b7
 }
 
 h1 {
@@ -24,7 +28,11 @@ h1 {
 }
 
 .headerContainer p {
+<<<<<<< HEAD
+	max-width: 500px;
+=======
 	width: 500px;
+>>>>>>> bf54435be6e8606dea34d6070676078a757543b7
 	margin: 0 auto;
 }
 

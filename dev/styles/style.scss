@@ -91,7 +91,11 @@ div.arrowContainer {
 }
 
 form {
+<<<<<<< HEAD
+	max-width: 800px;
+=======
 	width: 800px;
+>>>>>>> bf54435be6e8606dea34d6070676078a757543b7
 	height: 250px;
 	background: $baseDarkGrey;
 	margin: 0 auto;
@@ -139,6 +143,17 @@ input[type=text]:focus {
   font-family: $robotoCondensed;
 }
 
+<<<<<<< HEAD
+.arrowContainer {
+	transition: all 0.3s;
+}
+
+.arrowContainer:hover {
+	transform: scale(1.5);
+}
+
+=======
+>>>>>>> bf54435be6e8606dea34d6070676078a757543b7
 .didYouMean {
 	background: $baseDarkGrey;
 }
@@ -152,14 +167,51 @@ input[type=text]:focus {
 	width: calc((100% / 3) - 10px);
 	display: inline-block;
 	min-height: 150px;
+<<<<<<< HEAD
+=======
 	border: 1px solid #fff;
+>>>>>>> bf54435be6e8606dea34d6070676078a757543b7
 	float: left;
 	margin-right: 10px;
 	margin-bottom: 50px;
 	border: 3px solid #fff;
 	box-shadow: $baseShadow;
 	text-align: center;
+<<<<<<< HEAD
+	// margin: 0 auto;
+	position: relative;
+	background: $baseDarkGrey;
+	transition: all 0.3s;
+}
+
+.artistCard:hover,
+.showCard:hover {
+	transform: scale(1.05);
+}
+
+.artistCard p {
+	position: absolute;
+	bottom: 0;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	font-size: 10px;
+}
+
+h3, h4 {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+}
+
+h5 {
+	position: absolute;
+	bottom: 0%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+=======
 	margin: 0 auto;
+>>>>>>> bf54435be6e8606dea34d6070676078a757543b7
 }
 
 .dateContainer {
@@ -174,6 +226,7 @@ section {
 .featherlight-content {
 	width: 600px;
 	height: 600px;
+	border-radius: 10px;
 }
 
 div#mapContainer {
@@ -181,3 +234,73 @@ div#mapContainer {
 	height: 300px;
 }
 
+/* Portrait tablet and small desktops */
+@media (max-width: 940px) {
+	h1 {
+		font-size: 10rem;
+	}
+}
+
+/* Landscape phone to portrait tablet */
+@media (max-width: 768px) {
+	h1 {
+		font-size: 6rem;
+	}
+	.searchBar {
+		// max-width: 480px;
+	}
+	form {
+		// max-width: 480px
+	}
+	form h2 {
+		font-size: 2rem;
+	}
+	input[type=text] {
+		max-width: 400px;
+	}
+	.artistCard,
+	.showCard {
+		width: 50%;
+		margin: 0 auto;
+		transition: none;
+	}
+	.artistCard:hover,
+	.showCard:hover {
+		transform: none;
+	}
+	.featherlight-content {
+		max-width: 100%;
+	}
+}
+
+/* Landscape phones and down */
+@media (max-width: 480px) {
+	h1 {
+		font-size: 5rem;
+	}
+	.headerContainer p {
+	    max-width: 450px;
+	}
+	.searchBar {
+		max-width: 480px;
+	}
+	form {
+		max-width: 480px;
+	}
+	form h2 {
+		font-size: 2rem;
+	}
+	.artistCard,
+	.showCard {
+		width: 50%;
+		margin: 0 auto;
+		transition: none;
+	}
+	.artistCard:hover,
+	.showCard:hover {
+		transform: none;
+	}
+	.featherlight-content {
+		max-width: 100%;
+	}
+}
