@@ -1,0 +1,56 @@
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	margin: 0;
+	padding: 0;
+	letter-spacing: 0.05em;
+}
+
+p {
+	font-family: $openSans;
+	color: #fff;
+	text-shadow: $pShadow;
+	// font-size: 1.1rem;
+	font-size: 1.1rem;
+}
+
+h1 {
+	font-size: 11rem;
+	text-shadow: $baseShadow;
+}
+
+.headerContainer p {
+	max-width: 500px;
+	width: 500px;
+	margin: 0 auto;
+}
+
+h1 span {
+	color: $baseGreen;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-family: $robotoCondensed;
+	text-transform: uppercase;
+	color: #fff;
+}
+
+i {
+	color: #fff;
+}
+
+form h2 {
+	color: $baseGrey;
+	text-shadow: $pShadow;
+	font-size: 3rem;
+}

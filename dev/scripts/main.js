@@ -1,12 +1,21 @@
 const setList = {};
 setList.apiKey = 'adfa5e7c-adba-4668-a148-a7e3818447ce';
 
+$('.arrowContainer').click(function(e){
+	$('html, body').animate({
+		scrollTop: $('#searchBar').offset().top
+	}, 1500);
+})
+
 String.prototype.capitalize = function() {
    return this.replace(/(?:^|\s)\S/g, function(a) { return a.toUpperCase(); });
 };
 
 setList.getUserInput = () => {
 	$('form').on('submit', function(e){
+		$('html, body').animate({
+		         scrollTop: $("#listOfShows").offset().top
+		    }, 1500);
 		e.preventDefault();
 		$('.artistCardContainer').empty();
 		$('.showContainer').empty();
@@ -17,6 +26,9 @@ setList.getUserInput = () => {
 
 setList.selectCard = () => {
 	$('.artistCardContainer').on('click', '.artistCard', function(){
+		$('html, body').animate({
+		         scrollTop: $("#listOfShows").offset().top
+		    }, 1500);
 			let mbid = this.getAttribute('data-type');
 			setList.getVenueInfo(mbid);
 	});
