@@ -11,6 +11,17 @@ String.prototype.capitalize = function() {
    return this.replace(/(?:^|\s)\S/g, function(a) { return a.toUpperCase(); });
 };
 
+setList.smoothScroll = () => {
+	$('.arrowContainer').click(function(e){
+		$('html, body').animate({
+			scrollTop: $('#searchBar').offset().top
+		}, 1500);
+	})
+	String.prototype.capitalize = function() {
+	   return this.replace(/(?:^|\s)\S/g, function(a) { return a.toUpperCase(); });
+	};
+}
+
 setList.getUserInput = () => {
 	$('form').on('submit', function(e){
 		$('html, body').animate({
@@ -20,6 +31,7 @@ setList.getUserInput = () => {
 		$('.artistCardContainer').empty();
 		$('.showContainer').empty();
 		let artistName = $('input').val().toLowerCase().capitalize();
+
 		setList.getArtistInfo(artistName);
 	});
 }
@@ -60,6 +72,7 @@ setList.getArtistInfo = (userArtist) => {
 		let noDis = nameArray.filter((dis) => {
 			return dis.disambiguation != null
 		})
+
 		for (let i = 0; i < noDis.length; i++) {
 			setList.displayCards(noDis[i].name, noDis[i].disambiguation, noDis[i].mbid);
 		}
@@ -120,13 +133,11 @@ setList.recentShows = (arr) => {
 		let eventCity = arr[i].venue.city.name;
 		let eventLat = arr[i].venue.city.coords.lat;
 		let eventLong = arr[i].venue.city.coords.long;
+
 		if (arr[i].sets.set.length > 0) {
 			let eventSet = arr[i].sets.set[0].song;
 			setList.displayShows(eventDate, eventVenue, eventCity, eventSet, eventLat, eventLong);
-
 		}
-
-
 	}
 }
 
@@ -186,11 +197,11 @@ setList.lightBox = (songArr, callback) => {
 	});
 }
 
-
 setList.init = () => {
 	setList.getUserInput();
 	setList.selectCard();
 	setList.events();
+	setList.smoothScroll();
 }
 
 $(function(){
