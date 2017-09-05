@@ -1,0 +1,442 @@
+article, aside, details, figcaption, figure, footer, header, hgroup, nav, section, summary {
+  display: block; }
+
+audio, canvas, video {
+  display: inline-block; }
+
+audio:not([controls]) {
+  display: none;
+  height: 0; }
+
+[hidden] {
+  display: none; }
+
+html {
+  font-family: sans-serif;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%; }
+
+a:focus {
+  outline: thin dotted; }
+
+a:active, a:hover {
+  outline: 0; }
+
+h1 {
+  font-size: 2em; }
+
+abbr[title] {
+  border-bottom: 1px dotted; }
+
+b, strong {
+  font-weight: 700; }
+
+dfn {
+  font-style: italic; }
+
+mark {
+  background: #ff0;
+  color: #000; }
+
+code, kbd, pre, samp {
+  font-family: monospace, serif;
+  font-size: 1em; }
+
+pre {
+  white-space: pre-wrap;
+  word-wrap: break-word; }
+
+q {
+  quotes: \201C \201D \2018 \2019; }
+
+small {
+  font-size: 80%; }
+
+sub, sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline; }
+
+sup {
+  top: -.5em; }
+
+sub {
+  bottom: -.25em; }
+
+img {
+  border: 0; }
+
+svg:not(:root) {
+  overflow: hidden; }
+
+fieldset {
+  border: 1px solid silver;
+  margin: 0 2px;
+  padding: .35em .625em .75em; }
+
+button, input, select, textarea {
+  font-family: inherit;
+  font-size: 100%;
+  margin: 0; }
+
+button, input {
+  line-height: normal; }
+
+button, html input[type=button],
+input[type=reset], input[type=submit] {
+  -webkit-appearance: button;
+  cursor: pointer; }
+
+button[disabled], input[disabled] {
+  cursor: default; }
+
+input[type=checkbox], input[type=radio] {
+  box-sizing: border-box;
+  padding: 0; }
+
+input[type=search] {
+  -webkit-appearance: textfield;
+  -moz-box-sizing: content-box;
+  -webkit-box-sizing: content-box;
+  box-sizing: content-box; }
+
+input[type=search]::-webkit-search-cancel-button, input[type=search]::-webkit-search-decoration {
+  -webkit-appearance: none; }
+
+textarea {
+  overflow: auto;
+  vertical-align: top; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+body, figure {
+  margin: 0; }
+
+legend, button::-moz-focus-inner, input::-moz-focus-inner {
+  border: 0;
+  padding: 0; }
+
+.clearfix:after {
+  visibility: hidden;
+  display: block;
+  font-size: 0;
+  content: " ";
+  clear: both;
+  height: 0; }
+
+* {
+  box-sizing: border-box; }
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  padding: 0;
+  letter-spacing: 0.05em; }
+
+p {
+  font-family: "Open Sans", sans-serif;
+  color: #fff;
+  text-shadow: 0px 4px 3px rgba(0, 0, 0, 0.4), 0px 8px 13px rgba(0, 0, 0, 0.1), 0px 18px 23px rgba(0, 0, 0, 0.1);
+  font-size: 1.1rem; }
+
+h1 {
+  font-size: 11rem;
+  text-shadow: 0px 15px 5px rgba(0, 0, 0, 0.1), 10px 20px 5px rgba(0, 0, 0, 0.05), -10px 20px 5px rgba(0, 0, 0, 0.05); }
+
+.headerContainer p {
+  max-width: 500px;
+  width: 500px;
+  margin: 0 auto; }
+
+h1 span {
+  color: #7CCCC1; }
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Roboto Condensed", sans-serif;
+  text-transform: uppercase;
+  color: #fff; }
+
+i {
+  color: #fff; }
+
+form h2 {
+  color: #E6E7E9;
+  text-shadow: 0px 4px 3px rgba(0, 0, 0, 0.4), 0px 8px 13px rgba(0, 0, 0, 0.1), 0px 18px 23px rgba(0, 0, 0, 0.1);
+  font-size: 3rem; }
+
+h3,
+h4 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); }
+
+h4 {
+  width: 250px;
+  font-size: 0.8rem; }
+
+h5 {
+  position: absolute;
+  bottom: 0%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  margin: 0 auto;
+  font-size: 0.8rem; }
+
+.artistCard p {
+  width: 90%; }
+
+body {
+  background: #E6E7E9; }
+
+.wrapper {
+  max-width: 980px;
+  margin: 0 auto; }
+
+header {
+  background: #414042;
+  min-height: 100vh;
+  text-align: center;
+  position: relative; }
+
+.headerContainer {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%); }
+
+.topBar {
+  padding-top: 10px;
+  text-align: justify; }
+
+.topBar::after {
+  content: '';
+  display: inline-block;
+  width: 100%; }
+
+.topBarRight {
+  display: inline-block; }
+
+.topBarLeft {
+  display: inline-block; }
+
+.topBarRight img {
+  width: 100px; }
+
+.musicIcon svg {
+  width: 150px;
+  fill: #E6E7E9; }
+
+div.arrowContainer {
+  background: #7CCCC1;
+  display: inline-block;
+  height: 70px;
+  width: 70px;
+  border-radius: 50%;
+  text-align: center;
+  margin-top: 50px;
+  box-shadow: 0px 15px 5px rgba(0, 0, 0, 0.1), 10px 20px 5px rgba(0, 0, 0, 0.05), -10px 20px 5px rgba(0, 0, 0, 0.05); }
+
+.arrowContainer i {
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+  margin: 0 auto;
+  text-shadow: 0px 4px 3px rgba(0, 0, 0, 0.4), 0px 8px 13px rgba(0, 0, 0, 0.1), 0px 18px 23px rgba(0, 0, 0, 0.1); }
+
+.searchBar {
+  min-height: 75vh;
+  background-image: url("../../assets/jesse-darland-concert.jpg");
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover; }
+
+form {
+  width: 80%;
+  height: 250px;
+  background: #414042;
+  margin: 0 auto;
+  text-align: center;
+  box-shadow: 0px 15px 5px rgba(0, 0, 0, 0.1), 10px 20px 5px rgba(0, 0, 0, 0.05), -10px 20px 5px rgba(0, 0, 0, 0.05);
+  position: relative;
+  transform: translateY(50%);
+  padding-top: 25px;
+  border-radius: 5px; }
+
+input[type=text] {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateY(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  width: 80%;
+  height: 75px;
+  margin-top: 25px;
+  background: #E6E7E9;
+  border: none;
+  box-shadow: 0px 15px 5px rgba(0, 0, 0, 0.1), 10px 20px 5px rgba(0, 0, 0, 0.05), -10px 20px 5px rgba(0, 0, 0, 0.05);
+  border-radius: 5px;
+  text-align: center;
+  font-family: "Open Sans", sans-serif;
+  color: #414042;
+  font-size: 1.5rem; }
+
+input[type=text]:focus {
+  outline: 5px solid #7CCCC1; }
+
+::-webkit-input-placeholder {
+  /* Chrome/Opera/Safari */
+  font-family: "Open Sans", sans-serif; }
+
+::-moz-placeholder {
+  /* Firefox 19+ */
+  font-family: "Roboto Condensed", sans-serif; }
+
+:-ms-input-placeholder {
+  /* IE 10+ */
+  font-family: "Roboto Condensed", sans-serif; }
+
+:-moz-placeholder {
+  /* Firefox 18- */
+  font-family: "Roboto Condensed", sans-serif; }
+
+.arrowContainer {
+  transition: all 0.3s; }
+
+.arrowContainer:hover {
+  transform: scale(1.5); }
+
+.didYouMean {
+  background: #414042; }
+
+.artistCardContainer {
+  text-align: justify; }
+
+.showCard,
+.artistCard {
+  width: calc((100% / 3) - 10px);
+  display: inline-block;
+  min-height: 150px;
+  float: left;
+  margin-right: 10px;
+  margin-bottom: 50px;
+  border: 3px solid #fff;
+  box-shadow: 0px 4px 3px rgba(0, 0, 0, 0.4), 0px 8px 13px rgba(0, 0, 0, 0.1), 0px 18px 23px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  position: relative;
+  background: #414042;
+  transition: all 0.3s; }
+
+.showCard {
+  border: 3px solid #7CCCC1; }
+
+.artistCard:hover,
+.showCard:hover,
+li:hover {
+  transform: scale(1.05);
+  box-shadow: 0px 15px 5px rgba(0, 0, 0, 0.1), 10px 20px 5px rgba(0, 0, 0, 0.05), -10px 20px 5px rgba(0, 0, 0, 0.05); }
+
+.artistCard p {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 10px; }
+
+.dateContainer {
+  background: #7CCCC1;
+  width: 100px;
+  margin: 0 auto;
+  box-shadow: 0px 15px 5px rgba(0, 0, 0, 0.1), 10px 20px 5px rgba(0, 0, 0, 0.05), -10px 20px 5px rgba(0, 0, 0, 0.05);
+  margin-top: 5px; }
+
+section {
+  padding-top: 50px;
+  padding-bottom: 50px; }
+
+.featherlight-content {
+  width: 600px;
+  height: 600px;
+  border-radius: 10px; }
+
+div#mapContainer {
+  width: 100%;
+  height: 300px;
+  box-shadow: 0px 15px 5px rgba(0, 0, 0, 0.1), 10px 20px 5px rgba(0, 0, 0, 0.05), -10px 20px 5px rgba(0, 0, 0, 0.05); }
+
+ul {
+  list-style: none;
+  text-align: center; }
+
+li {
+  font-family: "Open Sans", sans-serif;
+  color: #414042;
+  font-size: 1.5rem;
+  margin-bottom: 15px;
+  transition: all 0.3s; }
+
+footer {
+  background: #7CCCC1; }
+
+@media (max-width: 940px) {
+  h1 {
+    font-size: 10rem; } }
+
+@media (max-width: 768px) {
+  h1 {
+    font-size: 6rem; }
+  .musicIcon svg {
+    width: 100px; }
+  form h2 {
+    font-size: 2rem; }
+  input[type=text] {
+    max-width: 400px; }
+  .artistCard,
+  .showCard {
+    width: 50%;
+    margin: 0 auto;
+    transition: none; }
+  .artistCard:hover,
+  .showCard:hover {
+    transform: none; }
+  .featherlight-content {
+    max-width: 100%; } }
+
+@media (max-width: 480px) {
+  h1 {
+    font-size: 5rem; }
+  .headerContainer p {
+    max-width: 450px; }
+  .musicIcon svg {
+    width: 80px; }
+  .searchBar {
+    max-width: 480px; }
+  form {
+    width: 90%; }
+  form h2 {
+    font-size: 2rem; }
+  .artistCard,
+  .showCard {
+    width: 50%;
+    margin: 0 auto;
+    transition: none; }
+  .artistCard:hover,
+  .showCard:hover {
+    transform: none; }
+  .featherlight-content {
+    max-width: 100%; } }
